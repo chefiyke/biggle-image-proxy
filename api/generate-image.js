@@ -22,9 +22,6 @@ export default async function handler(req, res) {
     })
   });
 
-  const text = await response.text();
+  const data = await response.json();
 
-return res.status(200).json({
-  raw: text
-});
-}
+return res.status(200).json(data);
